@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+		<body>
+			<script type="text/javascript">
+
+			alert('Voordat de game gespeeld wordt, wil ik even duidelijk maken dat de keuzes precies overgetypt moeten worden om het spel goed te kunnen spelen.');
+			alert('Je wordt wakker in een lege kamer. Het enige wat je om je heen hebt is een kaars. Je pakt de kaars op en loopt naar een bruine, houten deur. Voordat je voor de deur staat, opent het vanzelf. Je blijft doorlopen en je hebt de keuze om naar links of rechts te gaan.');
+
+			var welkegang = prompt(' \'links\' zie je aan het einde van de gang iets lichtsgevend. \'rechts\' is het helemaal donker. Welke gang wil je nemen?');
+
+			if (welkegang == 'links') {
+				alert('Langzaam loop je richting het licht. Nog eventjes en je bent om de hoek.');
+				alert('Je ziet een lantaarn op de grond liggen met een slordige krabbel op een papiertje \"Hello.\" Je hoort opeens voetstappen verderop. Je schijnt ernaartoe met je lantaarn en ziet een deur. Iets komt de trap op!');
+
+				var links = prompt('Voor je zie je een deur en paar meter voor je zie je een kast dat er niet al te groot uitziet. Waar ga je verstoppen, \'in de kast\' of \'door de deur\'?');
+			}
+
+			if (links === 'in de kast') {
+
+				var kast = prompt ('Je opent de kast deur en propt jezelf er in. Je sluit de deuren en je ziet dat er een klein gaatje zit aan de voorkant van de kast waardoor je doorheen kan kijken. Je ziet een gruwel uit de deur komen en hij loopt langzaam richting de kast. Je ziet dat hij niet weet waar je bent, je kan hem aanvallen zodra hij je passeert of je wacht en doet niks. Wil je de gruwel \'aanvallen\' of \'wachten\'?');
+			}
+
+			if (kast === 'aanvallen') {
+
+				alert('Je opent de kast deur en je geeft hem een klap op zijn achterhoofd...');
+				alert('Maar het heeft geen effect. Het draait zich om en grijpt je bij de keel vast en knijpt er in totdat je hoofd van je lichaam af rolt.');
+				alert('Je bent dood.');
+
+			} else if (kast === 'wachten') {
+
+				alert('Je wacht totdat de gruwel je passeert. Je kijkt door het gaatje om te kijken waar het nu is. Het staat voor de kast deuren stil en kijkt voor naar de kast...');
+				alert('Na het eventjes bekijken van de kast loopt de gruwel weer door. De voetstappen worden steeds zachter en zachter, totdat je niets meer hoort stap je uit de kast.');
+				alert('Je gaat nu naar de deur waar de gruwel uit kwam en je ziet')
+				alert('Je staat voor de deur en probeerd hem open te doen. Je gaat de trap af, waar de gruwel vandaan kwam.')
+				alert('Nu sta je voor een gigantische kluis met een briefje ernaast.')
+				var kluis = prompt('De kluis heeft een code erop. \'Om de kluis te openen moet je het tegenovergestelde weten van het foute antwoord. De code is vuur blust water.\' ') 
+			}
+
+			if (kluis !== 'vuur blust water') {
+				alert('De kluis herkende een foute code. Het heeft een zelfvernietigings protocol gestart.')
+				alert('De kluis explodeerd binnen 3 sec.')
+				alert('Je probeerd om de trap snel op te rennen maar het explodeerd voordat je halverwege de trap op bent gegaan.')
+				alert('Je bent dood.')
+
+			} else if  (kluis == 'water blust vuur') {
+				alert('In de kluis vindt je allerlei explosieven. Je neemt ze mee en zoekt een muur waar je ze op kan gebruiken.')
+			
+			} else if (links === 'door de deur') {
+				var deur = prompt('Je opent de deur en sluit hem meteen. Je zit nu in een hok met twee deuren. Een aan de linkerkant en een aan de rechterkant. Ga je door de \'linker deur\' of \'rechter deur\' ?');
+			} 
+
+			if (deur === 'rechter deur') {
+				var rechterdeur = confirm('Voordat je de deur wilt openen zie je bloed onder de deur lekken, je aarzelt. Weet je het zeker dat je deze deur in wilt?')
+					
+			} else if (deur === 'linker deur') {
+				var linkerdeur = confirm('Voordat je de deur inloopt hoor je iets tikken in de verte. weet je het zeker dat je deze deur in wilt?');
+			}
+						
+			if (linkerdeur) { /* <-- Vraag */	
+				alert('Je loopt de linkerdeur in en het is helemaal donker. Het getik dat je net hoorde wordt steeds luider en sneller. Je haalt je lantaarn erbij en loopt naar voren. Het is een erg grootte kamer.');
+				var linkerdeur2 = prompt('Je hebt de keuze om richting het getik te gaan of een andere kant op te gaan. Kies je ervoor om \'richting het getik\' te gaan of \'neem een andere weg\'?'); 
+			}
+							
+			if (linkerdeur2 === 'richting het getik') {
+				alert('Je loopt richting het getik en ziet dat het een bom is. Voordat je tijd hebt om weg te rennen explodeerd het.')
+				alert('Je bent dood.');
+			
+			} else if (linkerdeur2 === 'neem een andere weg') {
+				alert('Je hebt het einde van de kamer bereikt en je staat voor een gigantische deur. links van de deur staan ramen waardoor je heen kunt kijken.');
+				alert('Na het kijken realiseer je dat je op een afgelegen eiland zit.');
+				alert('Je probeert de deur open te doen maar hij zit op slot. Je hebt een sleutel nodig of misschien iets anders dat zou kunnen werken.')
+				var stairway = prompt('Je ziet rechts van de deur een trap dat omhoog leidt en onder de trap een luik. \'ga de trap op\' of \'ga het luik in\' ');}
+									
+			if (stairway === 'ga de trap op') {
+				alert('Je gaat de trap op.');
+				alert('Je ziet rechts een klein kistje onder een kast.');
+				alert('Je loopt naar het kistje toe en je ziet dat er een 3 digit-code op zit.');
+				alert('Je neemt het kistje mee en zoekt naar de code.');
+				alert('Verderop komt de gruwel uit een deur, Hij ziet jou en begint te schreeuwen doordat die zo hard scheeuwd valt een schilderij op de grond. Op de muur zie je \'1-6-...\' geschreven.');
+				var code = prompt('Je probeerd de kist te openen met de code:'); 
+
+			if (code >= 160) {  
+				alert('*click*');
+				alert('Het is open! Je ziet er een sleutel in liggen, zodra je de sleutel hebt ren je naar de voordeur.');
+				alert('Je staat nu voor de voordeur en stopt de sleutel in het slot, de gruwel komt langzaam achter je aan...');
+				alert('Het is gelukt! De deur is nu open en je rent naar buiten. Je ziet een klein bootje liggen aan de kust. Je rent ernaartoe en je bent succesvol ontsnapt.');
+				alert('Gefeliciteerd! Je hebt de goede einde gekregen.');
+			
+			} else if (code <= 159) {
+				alert('Het kistje zit nu vast doordat je de verkeerde code hebt ingevoerd. De gruwel staat nu voor je.');						
+				alert('Uit angst kan je geen centimeter bewegen.');
+				alert('De gruwel grijpt je bij de keel vast en knijpt er in totdat je hoofd van je lichaam af rolt.');
+				alert('Je bent dood.');
+			
+			} else if (stairway === 'ga het luik in') {
+				alert('Heel voorzichtig open je de luik. Je ziet dat het soort van een kleine opslag ruimte is met een kist aan de muur hangt.');
+				alert('Je loopt richting de kist en hoort iets de trap aflopen. Je sluit gauw het luik en gebruikt je lantaarn om wat licht te krijgen. Je ziet dat er achter de kist op de muur een raadsel staat.' );
+				var raadsel = prompt('\'Wat is het dubbele van het 3e getal dat na de 7 komt?\'')
+									}
+			if (raadsel > 19) {
+				alert('Je hebt de kist geopend!')
+				alert('Er zit een moker in de hamer, misschien kan je hiermee de raam open slaan en ontsnappen?')
+				alert('Je rent naar de voordeur en slaat de ruit in. Je springt erdoorheen en je bent buiten. Verderop zie je een klein bootje waar je snel naartoe rent en succesvol mee ontsnapt.')
+				alert('Gefeliciteerd! Je hebt de goede einde gekregen.'); 
+			
+			} else if (raadsel < 20) {
+				alert('Je voert de code in...')
+				alert('Het kistje zit nu vast!')
+				alert('Achter je hoor je de gruwel...')
+				alert('Je draait je om en je ziet hem voor je staan.')
+				alert('Uit angst kan je geen centimeter bewegen.')
+				alert('Hij grijpt je vast bij de keel totdat je hoofd van je lichaam af rolt...')
+				alert('Je bent dood.')
+	
+			}else if (rechterdeur) {
+				alert('Je opent de deur en je loopt een kamer in. Het is erg donker dus je gebruikt je lantaarn om te zien. Het stinkt heel erg en je kan niet te lang in deze kamer blijven. Door eventjes door de kamer te lopen zie je overal afgezaagde lichaamsdelen liggen. Je schijnt erop met je lantaarn en ziet dat er iets achter op de de muur geschreven is. \"Turn around\". Je hoort de deur achter je openen. Je draait je om en de gruwel staat bij de ingang, hij loopt naar je toe.');
+				alert('Door de angst kan je geen centimeter bewegen.');
+				alert('De gruwel staat voor je en grijpt je bij de keel vast en knijpt er in totdat je hoofd van je lichaam af rolt.');
+				alert('Je bent dood.');
+
+			} else {
+				alert('Je gebruikt de kaars om meer te kunnen zien.');
+				alert('Je loopt voorzichtig de gang in. Om de hoek hoor je iets de trap opkomen. Je hebt niks om je heen behalve een houten deur. Onmiddelijk open je hem en je gaat in de kamer verstoppen. Je sluit de deur niet helemaal om te kijken wie de trap opkomt, mogelijk is het iemand net als jij.')
+				alert('De deur is geopend en je ziet een gruwel!')
+				var deursluiten = prompt('Je hebt de keuze om de deur te sluiten of om te kijken wat het gaat doen. Wil je de \'deur sluiten\' of \'blijven kijken\'?')
+			
+			}
+
+			if (deursluiten == 'deur sluiten') {
+				alert('Je sluit de deur maar het net iets te hard waardoor de gruwel je heeft gehoord.')
+				alert('Het loopt nu richting de deur en trekt de deur uit de muur.')
+				alert('Uit angst kan je niet bewegen.')
+				alert('De gruwel grijpt je vast bij de keel en trekt het hoofd af van je lichaam.')
+				alert('Je bent dood.')
+			
+			} else if (deursluiten == 'blijven kijken') {  
+				alert('Je blijft door de deur gluren totdat hij je helemaal heeft gepasseerd. Zodra hij om de hoek is gegaan ga je uit de kamer en richting de deur waar de gruwel uit kwam.')
+				alert('Je staat nu voor de deur waar de gruwel uit kwam en probeerd hem te openen.')
+				alert('De deur zit op slot.')
+				alert('Je gaat nu terug naar het kamertje waar je net in verstopte.')
+				alert('Met de kaars probeer je wat te kunnen zien in het donkere kamertje, overal ligt wel troep. Hier en daar wat angstaanjagende poppen, onderdelen van een auto lijkt het en nog meer rommel. Boven je zie je een open luchtschacht waar je in kan. Je stapelt paar banden op elkaar en springt de luchtschacht in. Je kruipt een stuk door en je ziet een ingang van een andere luchtschacht voor je of je kruipt verder naar links.')
+				var luchtschacht = prompt('Wil je \'uit de luchtschacht\' of \'verder naar links? \' ')
+			} 
+
+			if (luchtschacht == 'uit de luchtschacht') { 
+				alert('Je trapt de luchtschacht eraf zodat je eruit kan. Je springt eruit en je bent nu in een andere gang. Het maakte veel geluid.')
+				alert('Je ziet een lantaarn op de grond liggen met een slordige krabbel op een papiertje \"Hello.\" Je hoort opeens voetstappen verderop. Je schijnt ernaartoe met de lantaarn en ziet een deur. Iets komt de trap op!');
+				var links = prompt('Voor je zie je een deur en paar meter voor je zie je een kast dat er niet al te groot uitziet. Waar ga je verstoppen, \'in de kast\' of \'door de deur\'?');
+			}
+
+			if (links === 'in de kast') {
+				var kast = prompt ('Je opent de kast deur en propt jezelf er in. Je sluit de deuren en je ziet dat er een klein gaatje zit aan de voorkant van de kast waardoor je doorheen kan kijken. Je ziet een gruwel uit de deur komen en hij loopt langzaam richting de kast. Je ziet dat hij niet weet waar je bent, je kan hem aanvallen zodra hij je passeert of je wacht en doet niks. Wil je de gruwel \'aanvallen\' of \'wachten\'?');
+			}
+
+			if (kast === 'aanvallen') {
+				alert('Je opent de kast deur en je geeft hem een klap op zijn achterhoofd...');
+				alert('Maar het heeft geen effect. Het draait zich om en grijpt je bij de keel vast en knijpt er in totdat je hoofd van je lichaam af rolt.');
+				alert('Je bent dood.');
+			
+			} else if (kast === 'wachten') {
+				alert('Je wacht totdat de gruwel je passeert. Je kijkt door het gaatje om te kijken waar het nu is. Het staat voor de kast deuren stil en kijkt voor naar de kast...');
+				alert('Na het eventjes bekijken van de kast loopt de gruwel weer door. De voetstappen worden steeds zachter en zachter, totdat je niets meer hoort stap je uit de kast.');
+				alert('Je gaat nu naar de deur waar de gruwel uit kwam en je ziet')
+			
+			} else if (links === 'door de deur') {
+				var deur = prompt('Je opent de deur en sluit hem meteen. Je zit nu in een hok met twee deuren. Een aan de linkerkant en een aan de rechterkant. Ga je door de \'linker deur\' of \'rechter deur\' ?');
+					}
+
+			if (deur === 'rechter deur') {
+				var rechterdeur = confirm('Voordat je de deur wilt openen zie je bloed onder de deur lekken, je aarzelt. Weet je het zeker dat je deze deur in wilt?')
+					
+			} else if (deur === 'linker deur') {
+						var linkerdeur = confirm('Voordat je de deur inloopt hoor je iets tikken in de verte. weet je het zeker dat je deze deur in wilt?');
+					
+			}
+			
+			if (linkerdeur) { /* <-- Vraag */	
+				alert('Je loopt de linkerdeur in en het is helemaal donker. Het getik dat je net hoorde wordt steeds luider en sneller. Je haalt je lantaarn erbij en loopt naar voren. Het is een erg grootte kamer.');
+				var linkerdeur2 = prompt('Je hebt de keuze om richting het getik te gaan of een andere kant op te gaan. Kies je ervoor om \'richting het getik\' te gaan of \'neem een andere weg\'?'); }
+
+			if (linkerdeur2 === 'richting het getik') {
+				alert('Je loopt richting het getik en ziet dat het een bom is. Voordat je tijd hebt om weg te rennen explodeerd het.')
+				alert('Je bent dood.');
+			
+			} else if (linkerdeur2 === 'neem een andere weg') {
+				alert('Je hebt het einde van de kamer bereikt en je staat voor een gigantische deur. links van de deur staan ramen waardoor je heen kunt kijken.');
+				alert('Na het kijken realiseer je dat je op een afgelegen eiland zit.');
+				alert('Je probeert de deur open te doen maar hij zit op slot. Je hebt een sleutel nodig of misschien iets anders dat zou kunnen werken.')
+				var stairway = prompt('Je ziet rechts van de deur een trap dat omhoog leidt en onder de trap een luik. \'ga de trap op\' of \'ga het luik in\' ');}
+
+			if (stairway === 'ga de trap op') {
+				alert('Je gaat de trap op.');
+				alert('Je ziet rechts een klein kistje onder een kast.');
+				alert('Je loopt naar het kistje toe en je ziet dat er een 3 digit-code op zit.');
+				alert('Je neemt het kistje mee en zoekt naar de code.');
+				alert('Verderop komt de gruwel uit een deur, Hij ziet jou en begint te schreeuwen doordat die zo hard scheeuwd valt een schilderij op de grond. Op de muur zie je \'1-6-...\' geschreven.');
+				var code = prompt('Je probeerd de kist te openen met de code:'); 
+										/* Minder dan / meer dan */				} 
+
+			if (code >= 160) {  
+				alert('*click*');
+				alert('Het is open! Je ziet er een sleutel in liggen, zodra je de sleutel hebt ren je naar de voordeur.');
+				alert('Je staat nu voor de voordeur en stopt de sleutel in het slot, de gruwel komt langzaam achter je aan...');
+				alert('Het is gelukt! De deur is nu open en je rent naar buiten. Je ziet een klein bootje liggen aan de kust. Je rent ernaartoe en je bent succesvol ontsnapt.');
+				alert('Gefeliciteerd! Je hebt de goede einde gekregen.');
+			
+			} else if (code <= 159) {
+				alert('Het kistje zit nu vast doordat je de verkeerde code hebt ingevoerd. De gruwel staat nu voor je.');						
+				alert('Uit angst kan je geen centimeter bewegen.');
+				alert('De gruwel grijpt je bij de keel vast en knijpt er in totdat je hoofd van je lichaam af rolt.');
+				alert('Je bent dood.');
+			
+			} else if (stairway === 'ga het luik in') {
+				alert('Heel voorzichtig open je de luik. Je ziet dat het soort van een kleine opslag ruimte is met een kist aan de muur hangt.');
+				alert('Je loopt richting de kist en hoort iets de trap aflopen. Je sluit gauw het luik en gebruikt je lantaarn om wat licht te krijgen. Je ziet dat er achter de kist op de muur een raadsel staat.' );
+				var raadsel = prompt('\'Wat is het dubbele van het 3e getal dat na de 7 komt?\'')
+			}
+	
+			if (raadsel > 19) {
+				alert('Je hebt de kist geopend!')
+				alert('Er zit een moker in de hamer, misschien kan je hiermee de raam open slaan en ontsnappen?')
+				alert('Je rent naar de voordeur en slaat de ruit in. Je springt erdoorheen en je bent buiten. Verderop zie je een klein bootje waar je snel naartoe rent en succesvol mee ontsnapt.')
+				alert('Gefeliciteerd! Je hebt de goede einde gekregen.'); 
+			
+			} else if (raadsel < 20) {
+				alert('Je voert de code in...')
+				alert('Het kistje zit nu vast!')
+				alert('Achter je hoor je de gruwel...')
+				alert('Je draait je om en je ziet hem voor je staan.')
+				alert('Uit angst kan je geen centimeter bewegen.')
+				alert('Hij grijpt je vast bij de keel totdat je hoofd van je lichaam af rolt...')
+				alert('Je bent dood.')
+										}
+			</script>
+		</body>
+</html>
